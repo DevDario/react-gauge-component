@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useLayoutEffect, useState } from "react";
 import { createPortal } from "react-dom";
-import { pie, select } from "d3";
+import { pie } from "d3-shape";
+import { select } from "d3-selection";
 import { defaultGaugeProps, GaugeComponentProps, GaugeType, getGaugeMarginByType } from "./types/GaugeComponentProps";
 import { Gauge, CustomContentConfig } from "./types/Gauge";
 import * as chartHooks from "./hooks/chart";

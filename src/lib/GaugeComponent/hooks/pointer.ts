@@ -1,10 +1,8 @@
-import {
-    easeElastic,
-    easeExpOut,
-    interpolateNumber,
-    drag,
-    select,
-} from "d3";
+import { easeElastic, easeExpOut } from "d3-ease";
+import { interpolateNumber } from "d3-interpolate";
+import { drag } from "d3-drag";
+import { select } from "d3-selection";
+import "d3-transition";
 import { PointerContext, PointerProps, PointerType, PointerWithValue, MultiPointerRef, defaultPointerContext } from "../types/Pointer";
 import { getCoordByValue, getEffectiveAngles } from "./arc";
 import { Gauge } from "../types/Gauge";

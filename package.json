@@ -17,13 +17,13 @@
     "dist",
     "README.md"
   ],
+  "sideEffects": false,
   "repository": {
     "type": "git",
     "url": "git+https://github.com/antoniolago/react-gauge-component.git"
   },
   "dependencies": {
-    "d3": "^7.9.0",
-    "lodash-es": "^4.17.22"
+    "d3": "^7.9.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -58,7 +58,7 @@
       "\\.(css|less|scss|sass)$": "<rootDir>/src/__mocks__/styleMock.js"
     },
     "transformIgnorePatterns": [
-      "node_modules/(?!(lodash-es)/)"
+      "node_modules/"
     ]
   },
   "devDependencies": {
@@ -73,8 +73,6 @@
     "@eslint/js": "^9.6.0",
     "@types/d3": "^7.4.0",
     "@types/jest": "^30.0.0",
-    "@types/lodash": "^4.14.202",
-    "@types/lodash-es": "^4.17.12",
     "@types/node": "^20.1.0",
     "@types/react": "^17.0.1",
     "@types/react-dom": "^17.0.1",

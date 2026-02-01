@@ -15,7 +15,7 @@ const GitHubIcon: React.FC<{ size?: number }> = ({ size = 18 }) => (
 // Install snippet component
 const InstallSnippet: React.FC<{ isLightTheme: boolean }> = ({ isLightTheme }) => {
   const [copied, setCopied] = useState(false);
-  const [selectedPm, setSelectedPm] = useState<'npm' | 'yarn' | 'bun'>('npm');
+  const [selectedPm, setSelectedPm] = useState<'npm' | 'yarn' | 'bun'>('bun');
   
   const commands = {
     npm: 'npm install react-gauge-component',
@@ -42,7 +42,7 @@ const InstallSnippet: React.FC<{ isLightTheme: boolean }> = ({ isLightTheme }) =
         <Terminal size={16} style={{ opacity: 0.7 }} />
         <span style={{ fontSize: '0.85rem', fontWeight: 600, opacity: 0.9 }}>Install</span>
         <div style={{ marginLeft: 'auto', display: 'flex', gap: '4px' }}>
-          {(['npm', 'yarn', 'bun'] as const).map((pm) => (
+          {(['bun', 'yarn','npm'] as const).map((pm) => (
             <button
               key={pm}
               onClick={() => setSelectedPm(pm)}

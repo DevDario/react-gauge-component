@@ -1,16 +1,14 @@
 import * as utils from './utils';
-import {
-  select,
-  scaleLinear,
-  interpolateHsl,
-  arc,
-} from "d3";
+import { select } from "d3-selection";
+import { scaleLinear } from "d3-scale";
+import { interpolateHsl } from "d3-interpolate";
+import { arc } from "d3-shape";
 import { Gauge } from '../types/Gauge';
 import * as arcHooks from './arc';
 import CONSTANTS from '../constants';
 import { Tooltip, defaultTooltipStyle } from '../types/Tooltip';
 import { GaugeType } from '../types/GaugeComponentProps';
-import { throttle } from 'lodash-es';
+import { throttle } from './throttle';
 import { Arc, SubArc } from '../types/Arc';
 
 /**

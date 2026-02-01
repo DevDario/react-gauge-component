@@ -2,7 +2,7 @@ import * as utils from './utils';
 import CONSTANTS from '../constants';
 import { Gauge } from '../types/Gauge';
 import { Tick, defaultTickLabels } from '../types/Tick';
-import * as d3 from 'd3';
+import { line } from 'd3-shape';
 import React from 'react';
 import { GaugeType } from '../types/GaugeComponentProps';
 import { getArcDataByValue, getCoordByValue, getEffectiveAngles } from './arc';
@@ -224,7 +224,7 @@ export const addTickLine = (tick: Tick, gauge: Gauge) => {
 
   // (gauge.dimensions.current.outerRadius - gauge.dimensions.current.innerRadius)
   // Create a D3 line generator
-  var lineGenerator = d3.line();
+  var lineGenerator = line();
 
   var lineCoordinates;
   // Define the line coordinates
