@@ -74,9 +74,10 @@ describe('Performance Tests', () => {
       
       //console.debug(`First 5 batches avg: ${firstHalf.toFixed(2)}ms, Last 5: ${secondHalf.toFixed(2)}ms`);
       
-      // Second half should not be more than 100% slower (2x)
-      // Increased tolerance to account for CI environment variance (GC, system load)
-      expect(secondHalf).toBeLessThan(firstHalf * 2);
+      // Second half should not be more than 4x slower
+      // High tolerance needed for CI environments where times are sub-millisecond
+      // and minor variance can cause large ratio differences
+      expect(secondHalf).toBeLessThan(Math.max(firstHalf * 4, 1));
     });
   });
 

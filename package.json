@@ -55,10 +55,17 @@
   "jest": {
     "moduleNameMapper": {
       "^d3$": "<rootDir>/src/__mocks__/d3.js",
+      "^d3-shape$": "<rootDir>/src/__mocks__/d3.js",
+      "^d3-selection$": "<rootDir>/src/__mocks__/d3.js",
+      "^d3-scale$": "<rootDir>/src/__mocks__/d3.js",
+      "^d3-interpolate$": "<rootDir>/src/__mocks__/d3.js",
+      "^d3-ease$": "<rootDir>/src/__mocks__/d3.js",
+      "^d3-drag$": "<rootDir>/src/__mocks__/d3.js",
+      "^d3-transition$": "<rootDir>/src/__mocks__/d3.js",
       "\\.(css|less|scss|sass)$": "<rootDir>/src/__mocks__/styleMock.js"
     },
     "transformIgnorePatterns": [
-      "node_modules/"
+      "node_modules/(?!(d3|d3-.*|internmap|delaunator|robust-predicates)/)"
     ]
   },
   "devDependencies": {
