@@ -8,25 +8,24 @@ React Gauge Chart Component for data visualization.
 
 A gallery of preset gauges and a sandbox editor is provided so you can create and edit your gauges in the [DEMO](https://antoniolago.github.io/react-gauge-component) page
 
-# Usage
+## Quick Start 
 
-## Installing with `npm`:
+Install with your package manager
 
 ```js
 npm install react-gauge-component --save
 ```
-## Installing with `pnpm`:
-
 ```js
 pnpm add react-gauge-component --save
 ```
-
-## Installing with `yarn`:
 ```
 yarn add react-gauge-component.
 ```
+```
+bun add react-gauge-component.
+```
 
-### Then use it:
+Then import it:
 
 ```jsx
 import GaugeComponent from 'react-gauge-component';
